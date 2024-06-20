@@ -1,4 +1,4 @@
-import { Container, Text, VStack, Button } from "@chakra-ui/react";
+import { Container, Text, VStack, Button, Input, FormControl, FormLabel } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -7,8 +7,19 @@ const Index = () => {
       <VStack spacing={4}>
         <Text fontSize="2xl">Welcome to Team Calendar</Text>
         <Text>Manage your team's schedule efficiently.</Text>
-        <Button as={Link} to="/calendar" colorScheme="teal" size="lg">
-          Go to Calendar
+        <FormControl id="email">
+          <FormLabel>Email address</FormLabel>
+          <Input type="email" />
+        </FormControl>
+        <FormControl id="password">
+          <FormLabel>Password</FormLabel>
+          <Input type="password" />
+        </FormControl>
+        <Button colorScheme="teal" size="lg">
+          Login
+        </Button>
+        <Button as={Link} to="/register" colorScheme="teal" size="lg">
+          Register
         </Button>
       </VStack>
     </Container>

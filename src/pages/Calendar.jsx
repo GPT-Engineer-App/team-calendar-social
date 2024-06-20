@@ -1,5 +1,4 @@
-import { Box, Heading, Text, Button, VStack, Flex, useColorModeValue } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Box, Heading, Text, VStack, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const Calendar = () => {
   const bgColor = useColorModeValue("gray.100", "gray.900");
@@ -25,19 +24,7 @@ const Calendar = () => {
           </Box>
         </VStack>
       </Box>
-      <Box w="250px" p={4} bg={bgColor}>
-        <VStack spacing={4}>
-          <Button as={Link} to="/calendar/monthly" colorScheme="teal" size="md">
-            Monthly View
-          </Button>
-          <Button as={Link} to="/calendar/weekly" colorScheme="teal" size="md">
-            Weekly View
-          </Button>
-          <Button as={Link} to="/calendar/daily" colorScheme="teal" size="md">
-            Daily View
-          </Button>
-        </VStack>
-      </Box>
+      
     </Flex>
   );
 };

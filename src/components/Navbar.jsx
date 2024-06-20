@@ -1,4 +1,4 @@
-import { Box, Flex, Button, useColorModeValue, Input, Text } from "@chakra-ui/react";
+import { Box, Flex, Button, useColorModeValue, Select, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 
@@ -8,8 +8,15 @@ const Navbar = () => {
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Box>Team Calendar</Box>
         <Flex alignItems={"center"}>
-          <Input placeholder="Search events" size="sm" mr={4} />
-          <Text mr={4}>Team Name</Text>
+          <Select placeholder="Select user" size="sm" mr={4}>
+            <option value="user1">User 1</option>
+            <option value="user2">User 2</option>
+          </Select>
+          <Select placeholder="View" size="sm" mr={4}>
+            <option value="/calendar/monthly">Monthly View</option>
+            <option value="/calendar/weekly">Weekly View</option>
+            <option value="/calendar/daily">Daily View</option>
+          </Select>
           <Flex alignItems={"center"} mr={4}>
             <FaUserCircle size="24px" />
             <Text ml={2}>User Name</Text>
